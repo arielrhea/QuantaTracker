@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  animation-duration: 1s;
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.dark-mode-toggle {
+  position: relative;
+}
+
+.dark-mode-toggle input[type="checkbox"] {
+  display: none;
+}
+
+.dark-mode-toggle label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 40px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.dark-mode-toggle label:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.dark-mode-toggle input:checked + label {
+  background-color: #2d2d2d;
+}
+
+.dark-mode-toggle input:checked + label:before {
+  transform: translateX(20px);
+}
+
+.row {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-link {
+  cursor: pointer;
+}
