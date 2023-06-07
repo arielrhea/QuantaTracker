@@ -3,31 +3,14 @@ body {
 }
 
 header {
-  background-color: #1c1c1c;
-  color: #ffffff;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-h1 {
-  margin: 0;
-  animation-duration: 1s;
-  animation-name: bounce;
-}
-
-@keyframes bounce {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
+  justify-content: center;
 }
 
 .dark-mode-toggle {
   position: relative;
+  margin-left: 10px;
 }
 
 .dark-mode-toggle input[type="checkbox"] {
@@ -74,7 +57,8 @@ h1 {
   border-bottom: none;
 }
 
-#pagination {
+#coin-pagination,
+#exchange-pagination {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -82,4 +66,59 @@ h1 {
 
 .page-link {
   cursor: pointer;
+}
+
+/* Add styles for dark mode */
+.dark-mode-toggle input[type="checkbox"]:checked + label:before {
+  transform: translateX(20px);
+  background-color: #fff;
+}
+
+body.dark-mode {
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+.dark-mode header {
+  background-color: #000;
+}
+
+.dark-mode .navbar {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-mode .navbar .navbar-brand {
+  color: #fff;
+}
+
+.dark-mode .navbar .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.dark-mode .navbar .navbar-toggler {
+  background-color: #000;
+  border-color: #fff;
+}
+
+.dark-mode .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.dark-mode .btn-primary {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Add dark mode styles for table rows */
+.dark-mode .row {
+  border-bottom-color: #888;
+}
+
+.dark-mode .row:last-child {
+  border-bottom-color: #ddd;
+}
+
+.dark-mode .col {
+  color: #fff;
 }
