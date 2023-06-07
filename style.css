@@ -69,56 +69,94 @@ header {
 }
 
 /* Add styles for dark mode */
+
+/* Styles for the dark mode toggle switch */
 .dark-mode-toggle input[type="checkbox"]:checked + label:before {
   transform: translateX(20px);
   background-color: #fff;
 }
 
+/* Dark mode styles for the entire page */
 body.dark-mode {
-  background-color: #2d2d2d;
-  color: #fff;
+  background-color: #2d2d2d; /* Background color of the page in dark mode */
+  color: #fff; /* Text color in dark mode */
 }
 
+/* Dark mode styles for the header */
 .dark-mode header {
-  background-color: #000;
+  background-color: #343a40; /* Background color of the header in dark mode */
 }
 
+/* Dark mode styles for the navbar */
 .dark-mode .navbar {
-  background-color: #000;
-  color: #fff;
+  background-color: #343a40; /* Background color of the navbar in dark mode */
+  color: #fff; /* Text color of the navbar in dark mode */
 }
 
+/* Dark mode styles for the navbar brand */
 .dark-mode .navbar .navbar-brand {
-  color: #fff;
+  color: #fff; /* Text color of the navbar brand in dark mode */
+  text-align: center; /* Center align the navbar brand */
 }
 
+/* Dark mode styles for the navbar links */
 .dark-mode .navbar .navbar-nav .nav-link {
-  color: #fff;
+  color: #fff; /* Text color of the navbar links in dark mode */
+  text-align: center; /* Center align the navbar links */
 }
 
+/* Dark mode styles for the navbar toggler button */
 .dark-mode .navbar .navbar-toggler {
-  background-color: #000;
-  border-color: #fff;
+  background-color: #343a40; /* Background color of the navbar toggler button in dark mode */
+  border-color: #fff; /* Border color of the navbar toggler button in dark mode */
 }
 
+/* Dark mode styles for the navbar toggler icon */
 .dark-mode .navbar-toggler-icon {
-  filter: invert(1);
+  filter: invert(1); /* Invert the color of the navbar toggler icon in dark mode */
 }
 
-.dark-mode .btn-primary {
+/* Modified styles for the primary buttons */
+.btn-primary {
   background-color: #000;
   color: #fff;
+  border-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Add dark mode styles for table rows */
-.dark-mode .row {
-  border-bottom-color: #888;
-}
-
-.dark-mode .row:last-child {
-  border-bottom-color: #ddd;
-}
-
-.dark-mode .col {
+.btn-primary:hover {
+  background-color: #212529;
   color: #fff;
+  border-color: #000;
+}
+
+/* Dark mode styles for the primary buttons */
+.dark-mode .btn-primary {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+}
+
+/* Dark mode styles for the primary button on hover */
+.dark-mode .btn-primary:hover {
+  background-color: #212529 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+}
+
+/* Dark mode styles for table rows */
+.dark-mode .row {
+  border-bottom-color: #888; /* Border color of the table rows in dark mode */
+}
+
+/* Dark mode styles for the last table row */
+.dark-mode .row:last-child {
+  border-bottom-color: #ddd; /* Border color of the last table row in dark mode */
+}
+
+/* Dark mode styles for column text */
+.dark-mode .col {
+  color: #fff; /* Text color of the columns in dark mode */
 }
