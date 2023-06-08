@@ -8,6 +8,23 @@ header {
   justify-content: center;
 }
 
+/* Add circular header styles */
+.circular-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px; /* adjust the width to fit your title */
+  height: 270px; /* adjust the height to fit your title */
+  border-radius: 50%; /* create a circular shape */
+  background-color: #eaeaea; /* set the background color of the header */
+  margin: 0 auto; /* center the header horizontally */
+  margin-top: 20px; /* adjust the margin-top as needed */
+}
+
+.circular-header h1 {
+  text-align: center;
+}
+
 .dark-mode-toggle {
   position: relative;
   margin-left: 10px;
@@ -83,32 +100,31 @@ body.dark-mode {
 }
 
 /* Dark mode styles for the header */
-.dark-mode header {
+.dark-mode .circular-header {
   background-color: #343a40; /* Background color of the header in dark mode */
 }
 
 /* Dark mode styles for the navbar */
 .dark-mode .navbar {
-  background-color: #343a40; /* Background color of the navbar in dark mode */
-  color: #fff; /* Text color of the navbar in dark mode */
+  background-color: #343a40 !important; /* Background color of the navbar in dark mode */
 }
 
 /* Dark mode styles for the navbar brand */
 .dark-mode .navbar .navbar-brand {
-  color: #fff; /* Text color of the navbar brand in dark mode */
+  color: #fff !important; /* Text color of the navbar brand in dark mode */
   text-align: center; /* Center align the navbar brand */
 }
 
 /* Dark mode styles for the navbar links */
 .dark-mode .navbar .navbar-nav .nav-link {
-  color: #fff; /* Text color of the navbar links in dark mode */
+  color: #fff !important; /* Text color of the navbar links in dark mode */
   text-align: center; /* Center align the navbar links */
 }
 
 /* Dark mode styles for the navbar toggler button */
-.dark-mode .navbar .navbar-toggler {
-  background-color: #343a40; /* Background color of the navbar toggler button in dark mode */
-  border-color: #fff; /* Border color of the navbar toggler button in dark mode */
+.dark-mode .navbar-toggler {
+  background-color: #343a40 !important; /* Background color of the navbar toggler button in dark mode */
+  border-color: #fff !important; /* Border color of the navbar toggler button in dark mode */
 }
 
 /* Dark mode styles for the navbar toggler icon */
@@ -124,6 +140,8 @@ body.dark-mode {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 25px;
+  padding: 5px 10px;
 }
 
 .btn-primary:hover {
@@ -159,4 +177,31 @@ body.dark-mode {
 /* Dark mode styles for column text */
 .dark-mode .col {
   color: #fff; /* Text color of the columns in dark mode */
+}
+
+/* Additional styles for the navigation bar */
+.navbar {
+  text-align: center;
+  max-width: fit-content;
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.navbar-list {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-list li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 5px 10px;
 }
