@@ -54,7 +54,7 @@ header {
   height: 16px;
   background-color: #fff;
   border-radius: 50%;
-  transition: transform 0.2s ease;
+  transition: transform 1.5s ease;
 }
 
 .dark-mode-toggle input:checked + label {
@@ -67,7 +67,7 @@ header {
 
 .row {
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 .row:last-child {
@@ -134,14 +134,15 @@ body.dark-mode {
 
 /* Modified styles for the primary buttons */
 .btn-primary {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   border-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
   padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to the buttons */
 }
 
 .btn-primary:hover {
@@ -154,14 +155,14 @@ body.dark-mode {
 .dark-mode .btn-primary {
   background-color: #000 !important;
   color: #fff !important;
-  border-color: #000 !important;
+  border-color: #fff !important;
 }
 
 /* Dark mode styles for the primary button on hover */
 .dark-mode .btn-primary:hover {
   background-color: #212529 !important;
   color: #fff !important;
-  border-color: #000 !important;
+  border-color: #fff !important;
 }
 
 /* Dark mode styles for table rows */
@@ -208,22 +209,29 @@ body.dark-mode {
 .navbar .nav-link,
 .navbar .nav-link:focus,
 .navbar .nav-link:active {
-  background-color: transparent; /* Set the background color of the button to transparent */
-  color: #000; /* Set the text color of the button */
-  border-color: lightgray !important; /* Set the border color of the button to light gray and override Bootstrap's default styles */
-  box-shadow: none !important; /* Remove the default button shadow on focus/active state and override Bootstrap's default styles */
+  background-color: #000; /* Set the background color of the button to white */
+  color: #000; /* Set the text color of the button to black */
+  border-color: #d6d6d6 !important; /* Set the border color of the button to light gray and override Bootstrap's default styles */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important; /* Add shadow to the buttons */
 }
 
 .navbar .nav-link:hover {
-  background-color: transparent !important; /* Set the background color of the button to transparent on hover and override Bootstrap's default styles */
-  color: #000 !important; /* Set the text color of the button on hover and override Bootstrap's default styles */
-  border-color: lightgray !important; /* Set the border color of the button to light gray on hover and override Bootstrap's default styles */
-  box-shadow: none !important; /* Remove the default button shadow on hover and override Bootstrap's default styles */
+  background-color: #1d1d1b !important; /* Set the background color of the button on hover and override Bootstrap's default styles */
+  color: #fff !important; /* Set the text color of the button on hover and override Bootstrap's default styles */
+  border-color: #1d1d1b !important; /* Set the border color of the button to dark gray on hover and override Bootstrap's default styles */
 }
 
 .navbar .nav-link.active {
-  background-color: lightgray !important; /* Set the background color of the active button to light gray and override Bootstrap's default styles */
+  background-color: #1d1d1b !important; /* Set the background color of the active button to dark gray and override Bootstrap's default styles */
   color: #fff !important; /* Set the text color of the active button and override Bootstrap's default styles */
-  border-color: lightgray !important; /* Set the border color of the active button to light gray and override Bootstrap's default styles */
-  box-shadow: none !important; /* Remove the default button shadow on active state and override Bootstrap's default styles */
+  border-color: #1d1d1b !important; /* Set the border color of the active button to dark gray and override Bootstrap's default styles */
+}
+/* Add transition for background-color and color properties */
+body {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Add transition for background-color and color properties in dark mode */
+.dark-mode body {
+  transition: background-color 0.5s, color 0.5s;
 }
