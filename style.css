@@ -205,3 +205,25 @@ body.dark-mode {
   border-radius: 25px;
   padding: 5px 10px;
 }
+.navbar .nav-link,
+.navbar .nav-link:focus,
+.navbar .nav-link:active {
+  background-color: transparent; /* Set the background color of the button to transparent */
+  color: #000; /* Set the text color of the button */
+  border-color: lightgray !important; /* Set the border color of the button to light gray and override Bootstrap's default styles */
+  box-shadow: none !important; /* Remove the default button shadow on focus/active state and override Bootstrap's default styles */
+}
+
+.navbar .nav-link:hover {
+  background-color: transparent !important; /* Set the background color of the button to transparent on hover and override Bootstrap's default styles */
+  color: #000 !important; /* Set the text color of the button on hover and override Bootstrap's default styles */
+  border-color: lightgray !important; /* Set the border color of the button to light gray on hover and override Bootstrap's default styles */
+  box-shadow: none !important; /* Remove the default button shadow on hover and override Bootstrap's default styles */
+}
+
+.navbar .nav-link.active {
+  background-color: lightgray !important; /* Set the background color of the active button to light gray and override Bootstrap's default styles */
+  color: #fff !important; /* Set the text color of the active button and override Bootstrap's default styles */
+  border-color: lightgray !important; /* Set the border color of the active button to light gray and override Bootstrap's default styles */
+  box-shadow: none !important; /* Remove the default button shadow on active state and override Bootstrap's default styles */
+}
