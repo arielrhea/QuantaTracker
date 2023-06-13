@@ -1,5 +1,6 @@
 body {
   font-family: Arial, sans-serif;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 header {
@@ -182,6 +183,7 @@ body.dark-mode {
 
 /* Additional styles for the navigation bar */
 .navbar {
+  background-color: #d6d6d6 !important; /* nav bar background color --------------------------------------------------------*/
   text-align: center;
   max-width: fit-content;
   margin: 0 auto;
@@ -206,11 +208,13 @@ body.dark-mode {
   border-radius: 25px;
   padding: 5px 10px;
 }
+
+/* Styles for the navbar links in normal mode */
 .navbar .nav-link,
 .navbar .nav-link:focus,
 .navbar .nav-link:active {
-  background-color: #000; /* Set the background color of the button to white */
-  color: #000; /* Set the text color of the button to black */
+  background-color: #fff !important; /* Set the background color of the button to black */
+  color: #000 !important; /* Set the text color of the button to white */
   border-color: #d6d6d6 !important; /* Set the border color of the button to light gray and override Bootstrap's default styles */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important; /* Add shadow to the buttons */
 }
@@ -221,17 +225,17 @@ body.dark-mode {
   border-color: #1d1d1b !important; /* Set the border color of the button to dark gray on hover and override Bootstrap's default styles */
 }
 
-.navbar .nav-link.active {
-  background-color: #1d1d1b !important; /* Set the background color of the active button to dark gray and override Bootstrap's default styles */
-  color: #fff !important; /* Set the text color of the active button and override Bootstrap's default styles */
-  border-color: #1d1d1b !important; /* Set the border color of the active button to dark gray and override Bootstrap's default styles */
-}
-/* Add transition for background-color and color properties */
-body {
-  transition: background-color 0.5s, color 0.5s;
+/* Styles for the navbar links in dark mode */
+.dark-mode .navbar .nav-link,
+.dark-mode .navbar .nav-link:focus,
+.dark-mode .navbar .nav-link:active {
+  background-color: #1d1d1b !important; /* Set the background color of the button to dark gray in dark mode */
+  color: #fff !important; /* Set the text color of the button to white in dark mode */
+  border-color: #888 !important; /* Set the border color of the button to gray in dark mode and override Bootstrap's default styles */
 }
 
-/* Add transition for background-color and color properties in dark mode */
-.dark-mode body {
-  transition: background-color 0.5s, color 0.5s;
+.dark-mode .navbar .nav-link:hover {
+  background-color: #000 !important; /* Set the background color of the button on hover in dark mode and override Bootstrap's default styles */
+  color: #fff !important; /* Set the text color of the button on hover in dark mode and override Bootstrap's default styles */
+  border-color: #888 !important; /* Set the border color of the button to gray on hover in dark mode and override Bootstrap's default styles */
 }
