@@ -4,7 +4,7 @@ const body = document.body;
 
 darkModeToggle.addEventListener('change', () => {
   body.classList.toggle('dark-mode');
-  body.style.transition = 'background-color 0.5s, color 0.5s'; // Add transition for background-color and color properties
+  body.style.transition = 'background-color 1.5s, color 1.5s'; // Add transition for background-color and color properties
 });
 
 
