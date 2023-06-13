@@ -29,7 +29,21 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
 // Display coins in the list
 function displayCoins(coinList) {
   coinListContainer.innerHTML = '';
+  // Header row
+  const headerRow = document.createElement('div');
+  headerRow.classList.add('row', 'header-row');
 
+  const headerTitles = ['Rank', 'Name', 'Price', '1H%', '24H%', '7D%', 'Market Cap', '24H Volume'];
+  headerTitles.forEach(title => {
+    const headerTitleElement = document.createElement('div');
+    headerTitleElement.classList.add('col');
+    headerTitleElement.textContent = title;
+    headerRow.appendChild(headerTitleElement);
+  });
+
+  coinListContainer.appendChild(headerRow);
+
+  // Coin rows
   coinList.forEach((coin, index) => {
     const row = document.createElement('div');
     row.classList.add('row');
