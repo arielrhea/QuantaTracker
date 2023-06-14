@@ -8,6 +8,9 @@ header {
   display: flex;
   justify-content: center;
 }
+.header-row {
+  font-weight: bold;
+}
 
 /* Add circular header styles */
 .circular-header {
